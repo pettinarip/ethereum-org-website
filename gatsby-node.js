@@ -4,6 +4,12 @@ const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const gatsbyConfig = require(`./gatsby-config.js`)
 const { getLangContentVersion } = require(`./src/utils/translations`)
+const { mergeTransalations } = require("./src/scripts/merge-translations")
+require("./src/scripts/copy-contributors")
+
+exports.onPreBuild = () => {
+  mergeTransalations()
+}
 
 const supportedLanguages = gatsbyConfig.siteMetadata.supportedLanguages
 const defaultLanguage = gatsbyConfig.siteMetadata.defaultLanguage

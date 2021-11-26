@@ -73,7 +73,7 @@
     "react-test-renderer": "^17.0.1"
   },
   "scripts": {
-    "build": "yarn merge-translations && yarn copy-contributors && NODE_OPTIONS=\"--max-old-space-size=3072\" yarn build:app && yarn build:lambda",
+    "build": " NODE_OPTIONS=\"--max-old-space-size=3072\" yarn build:app",
     "build:app": "gatsby build",
     "build:lambda": "netlify-lambda build src/lambda",
     "copy-contributors": "node src/scripts/copy-contributors.js",
