@@ -3,8 +3,14 @@
   "version": "6.9.0",
   "description": "Website of ethereum.org",
   "main": "index.js",
-  "repository": "git@github.com:ethereum/ethereum-org-website.git",
-  "author": "Sam Richards <sam.richards@ethereum.org>",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ethereum/ethereum-org-website.git"
+  },
+  "author": {
+    "name": "Sam Richards",
+    "email": "sam.richards@ethereum.org"
+  },
   "license": "MIT",
   "private": false,
   "dependencies": {
