@@ -20,6 +20,8 @@
 [functions]
   included_files = [
     "!./src/data/**/*",
-    "!./public/**/*",
-    
+    "!./public/**/*", 
   ]
+
+[context.revalidate-issue]
+  BUILD_LOCALES=en,es
