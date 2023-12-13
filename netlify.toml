@@ -24,4 +24,4 @@
   ]
 
 [context.revalidate-issue]
-  BUILD_LOCALES=en,es
+  BUILD_LOCALES = "en,es"
