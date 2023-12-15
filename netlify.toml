@@ -19,8 +19,8 @@
 
 [functions]
   included_files = [
-    "!./src/data/**/*",
-    "!./public/**/*", 
+    "./src/**/*",
+    "!./public/**/*"
   ]
 
 [context.revalidate-issue.environment]
