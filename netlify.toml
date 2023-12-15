@@ -23,5 +23,5 @@
     "!./public/**/*", 
   ]
 
-[context.revalidate-issue]
+[context.revalidate-issue.environment]
   BUILD_LOCALES = "en,es"
