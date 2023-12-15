@@ -19,8 +19,8 @@
 
 [functions]
   included_files = [
+    "./public/**/*",
     "./src/**/*",
-    "!./public/**/*"
   ]
 
 [context.revalidate-issue.environment]
