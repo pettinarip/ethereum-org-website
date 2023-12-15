@@ -2,14 +2,12 @@ import { Lang } from "@/lib/types"
 
 import { Skill } from "@/components/TutorialMetadata"
 
-import { IExternalTutorial, ITutorial } from "@/pages/developers/tutorials"
-
 // Take all tutorials, and return a list of tutorials for a specific locale
 export const filterTutorialsByLang = (
   internalTutorials: any,
-  externalTutorials: Array<IExternalTutorial>,
+  externalTutorials: Array<any>,
   locale: Lang
-): Array<ITutorial> => {
+): Array<any> => {
   const internalTutorialsMap = internalTutorials.map((tutorial) => {
     const lang = tutorial?.lang || "en"
 
@@ -18,9 +16,7 @@ export const filterTutorialsByLang = (
       title: tutorial?.title || "",
       description: tutorial?.description || "",
       author: tutorial?.author || "",
-      tags: tutorial?.tags?.map((tag) =>
-        (tag || "").toLowerCase().trim()
-      ),
+      tags: tutorial?.tags?.map((tag) => (tag || "").toLowerCase().trim()),
       skill: tutorial?.skill as Skill,
       timeToRead: tutorial?.timeToRead,
       published: tutorial?.published,
@@ -29,22 +25,20 @@ export const filterTutorialsByLang = (
     }
   })
 
-  const externalTutorialsMap = externalTutorials.map<ITutorial>(
-    (tutorial: IExternalTutorial) => ({
-      to: tutorial.url,
-      title: tutorial.title,
-      description: tutorial.description,
-      author: tutorial.author,
-      tags: tutorial.tags.map((tag) => tag.toLowerCase().trim()),
-      skill: tutorial.skillLevel as Skill,
-      timeToRead: Number(tutorial.timeToRead),
-      published: new Date(tutorial.publishDate).toISOString(),
-      lang: tutorial.lang || "en",
-      isExternal: true,
-    })
-  )
+  const externalTutorialsMap = externalTutorials.map<any>((tutorial: any) => ({
+    to: tutorial.url,
+    title: tutorial.title,
+    description: tutorial.description,
+    author: tutorial.author,
+    tags: tutorial.tags.map((tag) => tag.toLowerCase().trim()),
+    skill: tutorial.skillLevel as Skill,
+    timeToRead: Number(tutorial.timeToRead),
+    published: new Date(tutorial.publishDate).toISOString(),
+    lang: tutorial.lang || "en",
+    isExternal: true,
+  }))
 
-  const allTutorials: Array<ITutorial> = [
+  const allTutorials: Array<any> = [
     ...externalTutorialsMap,
     ...internalTutorialsMap,
   ]
@@ -63,7 +57,7 @@ export const filterTutorialsByLang = (
 }
 
 export const getSortedTutorialTagsForLang = (
-  filteredTutorialsByLang: Array<ITutorial> = []
+  filteredTutorialsByLang: Array<any> = []
 ) => {
   const allTags = filteredTutorialsByLang.reduce<Array<string>>(
     (tags, tutorial) => {

@@ -16,8 +16,6 @@ import { CONTENT_DIR, DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
 import { toPosixPath } from "./relativePath"
 
-import { ITutorial } from "@/pages/developers/tutorials"
-
 const CURRENT_CONTENT_DIR = join(process.cwd(), CONTENT_DIR)
 
 const getPostSlugs = (dir: string, files: string[] = []) => {
@@ -347,29 +345,39 @@ export const getContent = (dir: string) => {
   return content
 }
 
-export const getTutorialsData = (locale: string): ITutorial[] => {
-  const fullPath = join(CURRENT_CONTENT_DIR, locale !== 'en' ? `translations/${locale!}` : '', 'developers/tutorials')
-  let tutorialData: ITutorial[] = []
+export const getTutorialsData = (locale: string): any[] => {
+  const fullPath = join(
+    CURRENT_CONTENT_DIR,
+    locale !== "en" ? `translations/${locale!}` : "",
+    "developers/tutorials"
+  )
+  let tutorialData: any[] = []
 
   if (fs.existsSync(fullPath)) {
     const languageTutorialFiles = fs.readdirSync(fullPath)
 
     tutorialData = languageTutorialFiles.map((dir) => {
-      const filePath = join(CURRENT_CONTENT_DIR, locale !== 'en' ? `translations/${locale!}` : '', 'developers/tutorials', dir, 'index.md')
+      const filePath = join(
+        CURRENT_CONTENT_DIR,
+        locale !== "en" ? `translations/${locale!}` : "",
+        "developers/tutorials",
+        dir,
+        "index.md"
+      )
       const fileContents = fs.readFileSync(filePath, "utf8")
       const { data, content } = matter(fileContents)
       const frontmatter = data as Frontmatter
-      
+
       return {
         to: join(`/${locale}/developers/tutorials`, dir),
         title: frontmatter.title,
         description: frontmatter.description,
-        author: frontmatter.author || '',
+        author: frontmatter.author || "",
         tags: frontmatter.tags,
         skill: frontmatter.skill as Skill,
         timeToRead: Math.round(readingTime(content).minutes),
         published: dateToString(frontmatter.published),
-        lang: frontmatter.lang, 
+        lang: frontmatter.lang,
         isExternal: false,
       }
     })
