@@ -15,9 +15,6 @@ import type {
 } from "@/lib/interfaces"
 
 import type { CallToActionProps } from "@/components/Hero/CallToAction"
-import { ImageProps } from "@/components/Image"
-
-import { layoutMapping } from "@/pages/[...slug]"
 
 export type ChildOnlyProp = { children?: ReactNode }
 
@@ -36,9 +33,6 @@ export type Frontmatter = RoadmapFrontmatter &
   StakingFrontmatter &
   DocsFrontmatter &
   TutorialFrontmatter
-
-export type LayoutMappingType = typeof layoutMapping
-export type Layout = keyof LayoutMappingType
 
 export type Lang =
   | "en"
