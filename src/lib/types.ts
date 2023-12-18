@@ -17,6 +17,8 @@ import type {
 import type { CallToActionProps } from "@/components/Hero/CallToAction"
 import { ImageProps } from "@/components/Image"
 
+import { layoutMapping } from "@/pages/[...slug]"
+
 export type ChildOnlyProp = { children?: ReactNode }
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
@@ -35,7 +37,7 @@ export type Frontmatter = RoadmapFrontmatter &
   DocsFrontmatter &
   TutorialFrontmatter
 
-export type LayoutMappingType = any
+export type LayoutMappingType = typeof layoutMapping
 export type Layout = keyof LayoutMappingType
 
 export type Lang =
