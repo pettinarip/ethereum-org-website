@@ -184,7 +184,7 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
-    "code": "hy-am",
+    "code": "hy-AM",
     "crowdinCode": "hy-AM",
     "name": "Armenian",
     "localName": "հայերեն",
@@ -352,7 +352,7 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
-    "code": "pt-br",
+    "code": "pt-BR",
     "crowdinCode": "pt-BR",
     "name": "Portuguese (Brazilian)",
     "localName": "Português",
@@ -488,7 +488,7 @@
     "dateFormat": "YYYY-MM-DD"
   },
   {
-    "code": "zh-tw",
+    "code": "zh-TW",
     "crowdinCode": "zh-TW",
     "name": "Chinese Traditional",
     "localName": "繁體中文",
