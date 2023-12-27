@@ -17,4 +17,8 @@ module.exports = {
   localePath: "./src/intl",
   // see updates to your translation JSON files without having to restart your development server each time
   reloadOnPrerender: true,
+  // languages will be lowered case
+  load: "currentOnly",
+  cleanCode: true,
+  lowerCaseLng: true,
 }
