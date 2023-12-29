@@ -8,16 +8,13 @@ import { Image } from "@/components/Image"
 import { FAKE_DEMO_ADDRESS } from "../../constants"
 import { NotificationPopover } from "../../NotificationPopover"
 
-import QRDark from "@/public/qr-code-ethereum-org-dark.png"
-import QRLight from "@/public/qr-code-ethereum-org-light.png"
+import QRDark from "@/assets/qr-code-ethereum-org-dark.png"
+import QRLight from "@/assets/qr-code-ethereum-org-light.png"
 
 const MotionBox = motion(Box)
 
 export const ReceiveEther = () => {
-  const qrImage = useColorModeValue(
-    QRLight,
-    QRDark,
-  )
+  const qrImage = useColorModeValue(QRLight, QRDark)
 
   const SPACING = { base: 3, md: 5 }
   const QR_SIZE = { base: "80px", md: "120px" }

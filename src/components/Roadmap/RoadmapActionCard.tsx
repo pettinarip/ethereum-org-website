@@ -10,10 +10,10 @@ import {
 import { ButtonLink } from "@/components/Buttons"
 import { Image } from "@/components/Image"
 
-import futureProofing from "@/public/roadmap/roadmap-future.png"
-import security from "@/public/roadmap/roadmap-security.png"
-import scaling from "@/public/roadmap/roadmap-transactions.png"
-import userExperience from "@/public/roadmap/roadmap-ux.png"
+import futureProofing from "@/assets/roadmap/roadmap-future.png"
+import security from "@/assets/roadmap/roadmap-security.png"
+import scaling from "@/assets/roadmap/roadmap-transactions.png"
+import userExperience from "@/assets/roadmap/roadmap-ux.png"
 
 interface IProps {
   to: string
@@ -48,11 +48,7 @@ const RoadmapActionCard: React.FC<IProps> = ({
       borderColor="lightBorder"
     >
       <Center background="cardGradient" h="260px">
-        <Image
-          src={imgSrc}
-          alt={alt}
-          style={{ objectFit: "contain" }}
-        />
+        <Image src={imgSrc} alt={alt} style={{ objectFit: "contain" }} />
       </Center>
       <Flex p={6} flex="1" flexDir="column" justify="space-between" gap={4}>
         <Heading as="h3" size="md">

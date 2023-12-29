@@ -36,11 +36,11 @@ import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import eth from "@/public/eth.png"
-import ogImage from "@/public/eth.png"
-import ethCat from "@/public/eth-gif-cat.png"
-import defi from "@/public/finance_transparent.png"
-import ethereum from "@/public/what-is-ethereum.png"
+import eth from "@/assets/eth.png"
+import ogImage from "@/assets/eth.png"
+import ethCat from "@/assets/eth-gif-cat.png"
+import defi from "@/assets/finance_transparent.png"
+import ethereum from "@/assets/what-is-ethereum.png"
 
 const Page = (props: ChildOnlyProp) => (
   <Flex

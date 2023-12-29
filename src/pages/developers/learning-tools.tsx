@@ -21,26 +21,26 @@ import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import AlchemyUniversityImage from "@/public/dev-tools/alchemyuniversity.png"
-import BloomTechImage from "@/public/dev-tools/bloomtech.png"
-import BuildSpaceImage from "@/public/dev-tools/buildspace.png"
-import CaptureTheEtherImage from "@/public/dev-tools/capturetheether.png"
-import ChainIDEImage from "@/public/dev-tools/chainIDE.png"
-import ChainShotImage from "@/public/dev-tools/chainshot.png"
-import ConsensysImage from "@/public/dev-tools/consensys.png"
-import CryptoZombieImage from "@/public/dev-tools/crypto-zombie.png"
-import EthDotBuildImage from "@/public/dev-tools/eth-dot-build.png"
-import MetaschoolImage from "@/public/dev-tools/metaschool.png"
-import NFTSchoolImage from "@/public/dev-tools/nftschool.png"
-import EthernautImage from "@/public/dev-tools/oz.png"
-import PlatziImage from "@/public/dev-tools/platzi.png"
-import PointerImage from "@/public/dev-tools/pointer.png"
-import QuestbookImage from "@/public/dev-tools/questbook.png"
-import RemixImage from "@/public/dev-tools/remix.png"
-import ReplitImage from "@/public/dev-tools/replit.png"
-import SpeedRunEthereumImage from "@/public/dev-tools/speed-run-ethereum.png"
-import TenderlyImage from "@/public/dev-tools/tenderly.png"
-import EnterpriseEth from "@/public/enterprise-eth.png"
+import AlchemyUniversityImage from "@/assets/dev-tools/alchemyuniversity.png"
+import BloomTechImage from "@/assets/dev-tools/bloomtech.png"
+import BuildSpaceImage from "@/assets/dev-tools/buildspace.png"
+import CaptureTheEtherImage from "@/assets/dev-tools/capturetheether.png"
+import ChainIDEImage from "@/assets/dev-tools/chainIDE.png"
+import ChainShotImage from "@/assets/dev-tools/chainshot.png"
+import ConsensysImage from "@/assets/dev-tools/consensys.png"
+import CryptoZombieImage from "@/assets/dev-tools/crypto-zombie.png"
+import EthDotBuildImage from "@/assets/dev-tools/eth-dot-build.png"
+import MetaschoolImage from "@/assets/dev-tools/metaschool.png"
+import NFTSchoolImage from "@/assets/dev-tools/nftschool.png"
+import EthernautImage from "@/assets/dev-tools/oz.png"
+import PlatziImage from "@/assets/dev-tools/platzi.png"
+import PointerImage from "@/assets/dev-tools/pointer.png"
+import QuestbookImage from "@/assets/dev-tools/questbook.png"
+import RemixImage from "@/assets/dev-tools/remix.png"
+import ReplitImage from "@/assets/dev-tools/replit.png"
+import SpeedRunEthereumImage from "@/assets/dev-tools/speed-run-ethereum.png"
+import TenderlyImage from "@/assets/dev-tools/tenderly.png"
+import EnterpriseEth from "@/assets/enterprise-eth.png"
 
 const Page = (props: ChildOnlyProp) => (
   <Flex
@@ -473,7 +473,6 @@ const LearningToolsPage = () => {
           <FeedbackCard />
         </ContentBox>
       </MainArticle>
-      
     </Page>
   )
 }

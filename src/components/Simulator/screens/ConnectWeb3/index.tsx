@@ -27,7 +27,7 @@ import { EXAMPLE_APP_URL } from "./constants"
 import { Slider } from "./Slider"
 import { Web3App } from "./Web3App"
 
-import NFTImage from "@/public/deep-panic.png"
+import NFTImage from "@/assets/deep-panic.png"
 
 export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
   const { progressStepper, step } = nav
@@ -141,7 +141,12 @@ export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
                 Your collection (1)
               </Text>
               <Flex gap={2} mb={6}>
-                <Image src={NFTs[0].image} width={120} height={120} alt="NFT Image" />
+                <Image
+                  src={NFTs[0].image}
+                  width={120}
+                  height={120}
+                  alt="NFT Image"
+                />
                 <NotificationPopover
                   title="Example walkthrough"
                   content="These are some things you could do as the owner of your NFTs"

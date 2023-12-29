@@ -28,7 +28,7 @@ const config: StorybookConfig = {
     "@storybook/addon-onboarding",
     "@storybook/addon-interactions",
     "@chakra-ui/storybook-addon",
-    "storybook-react-i18next"
+    "storybook-react-i18next",
   ],
   staticDirs: ["../public"],
   framework: {
@@ -46,7 +46,7 @@ const config: StorybookConfig = {
   webpackFinal: async (config: any) => {
     // Add path aliases
     config.resolve.alias["@"] = path.resolve(__dirname, "../src")
-    config.resolve.alias["@/public"] = path.resolve(__dirname, "../public")
+    config.resolve.alias["@/assets"] = path.resolve(__dirname, "../public")
 
     return config
   },

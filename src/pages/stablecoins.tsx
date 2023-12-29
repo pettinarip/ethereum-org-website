@@ -42,19 +42,19 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
+import dogeComputerImg from "@/assets/doge-computer.png"
+// -- daps
+import aaveImg from "@/assets/stablecoins/aave.png"
+import compoundImg from "@/assets/stablecoins/compound.png"
+// Static assets
+import daiLargeImg from "@/assets/stablecoins/dai-large.png"
+import heroImg from "@/assets/stablecoins/hero.png"
+import stablecoinsWtfImg from "@/assets/stablecoins/tools/stablecoinswtf.png"
+import usdcLargeImg from "@/assets/stablecoins/usdc-large.png"
 import {
   fetchEthereumEcosystemData,
   fetchEthereumStablecoinsData,
 } from "@/lib/api/stablecoinsData"
-import dogeComputerImg from "@/public/doge-computer.png"
-// -- daps
-import aaveImg from "@/public/stablecoins/aave.png"
-import compoundImg from "@/public/stablecoins/compound.png"
-// Static assets
-import daiLargeImg from "@/public/stablecoins/dai-large.png"
-import heroImg from "@/public/stablecoins/hero.png"
-import stablecoinsWtfImg from "@/public/stablecoins/tools/stablecoinswtf.png"
-import usdcLargeImg from "@/public/stablecoins/usdc-large.png"
 
 type EthereumDataResponse = Array<{
   id: string

@@ -1,13 +1,13 @@
 import { Framework } from "@/lib/interfaces"
 
-import EthDiamondBlackImage from "@/public/assets/eth-diamond-black.png"
-import EpirusImage from "@/public/dev-tools/epirus.png"
-import FoundryImage from "@/public/dev-tools/foundry.png"
-import HardhatImage from "@/public/dev-tools/hardhat.png"
-import KurtosisImage from "@/public/dev-tools/kurtosis.png"
-import ScaffoldEthImage from "@/public/dev-tools/scaffoldeth.png"
-import TruffleImage from "@/public/dev-tools/truffle.png"
-import WaffleImage from "@/public/dev-tools/waffle.png"
+import EthDiamondBlackImage from "@/assets/assets/eth-diamond-black.png"
+import EpirusImage from "@/assets/dev-tools/epirus.png"
+import FoundryImage from "@/assets/dev-tools/foundry.png"
+import HardhatImage from "@/assets/dev-tools/hardhat.png"
+import KurtosisImage from "@/assets/dev-tools/kurtosis.png"
+import ScaffoldEthImage from "@/assets/dev-tools/scaffoldeth.png"
+import TruffleImage from "@/assets/dev-tools/truffle.png"
+import WaffleImage from "@/assets/dev-tools/waffle.png"
 
 const frameworksList: Array<Framework> = [
   {

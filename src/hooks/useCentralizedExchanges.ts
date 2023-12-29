@@ -4,46 +4,46 @@ import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 
 // TODO: Remove unused?
-// import argent from "@/public/wallets/argent.png"
-// import binanceus from "@/public/exchanges/binance.png"
-// import imtoken from "@/public/wallets/imtoken.png"
-// import mycrypto from "@/public/wallets/mycrypto.png"
-// import myetherwallet from "@/public/wallets/myetherwallet.png"
-// import squarelink from "@/public/wallets/squarelink.png"
-// import trust from "@/public/wallets/trust.png"
+// import argent from "@/assets/wallets/argent.png"
+// import binanceus from "@/assets/exchanges/binance.png"
+// import imtoken from "@/assets/wallets/imtoken.png"
+// import mycrypto from "@/assets/wallets/mycrypto.png"
+// import myetherwallet from "@/assets/wallets/myetherwallet.png"
+// import squarelink from "@/assets/wallets/squarelink.png"
+// import trust from "@/assets/wallets/trust.png"
 import type { ImageProps } from "@/components/Image"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import exchangeData from "@/data/exchangesByCountry"
 
-import binance from "@/public/exchanges/binance.png"
-import bitbuy from "@/public/exchanges/bitbuy.png"
-import bitfinex from "@/public/exchanges/bitfinex.png"
-import bitflyer from "@/public/exchanges/bitflyer.png"
-import bitkub from "@/public/exchanges/bitkub.png"
-import bitso from "@/public/exchanges/bitso.png"
-import bittrex from "@/public/exchanges/bittrex.png"
-import bitvavo from "@/public/exchanges/bitvavo.png"
-import bybit from "@/public/exchanges/bybit.png"
-import coinbase from "@/public/exchanges/coinbase.png"
-import coinmama from "@/public/exchanges/coinmama.png"
-import coinspot from "@/public/exchanges/coinspot.png"
-import cryptocom from "@/public/exchanges/crypto.com.png"
-import easycrypto from "@/public/exchanges/easycrypto.png"
-import gateio from "@/public/exchanges/gateio.png"
-import gemini from "@/public/exchanges/gemini.png"
-import huobiglobal from "@/public/exchanges/huobiglobal.png"
-import itezcom from "@/public/exchanges/itezcom.png"
-import korbit from "@/public/exchanges/korbit.png"
-import kraken from "@/public/exchanges/kraken.png"
-import kucoin from "@/public/exchanges/kucoin.png"
-import moonpay from "@/public/exchanges/moonpay.png"
-import mtpelerin from "@/public/exchanges/mtpelerin.png"
-import okx from "@/public/exchanges/okx.png"
-import rain from "@/public/exchanges/rain.png"
-import shakepay from "@/public/exchanges/shakepay.png"
-import wazirx from "@/public/exchanges/wazirx.png"
+import binance from "@/assets/exchanges/binance.png"
+import bitbuy from "@/assets/exchanges/bitbuy.png"
+import bitfinex from "@/assets/exchanges/bitfinex.png"
+import bitflyer from "@/assets/exchanges/bitflyer.png"
+import bitkub from "@/assets/exchanges/bitkub.png"
+import bitso from "@/assets/exchanges/bitso.png"
+import bittrex from "@/assets/exchanges/bittrex.png"
+import bitvavo from "@/assets/exchanges/bitvavo.png"
+import bybit from "@/assets/exchanges/bybit.png"
+import coinbase from "@/assets/exchanges/coinbase.png"
+import coinmama from "@/assets/exchanges/coinmama.png"
+import coinspot from "@/assets/exchanges/coinspot.png"
+import cryptocom from "@/assets/exchanges/crypto.com.png"
+import easycrypto from "@/assets/exchanges/easycrypto.png"
+import gateio from "@/assets/exchanges/gateio.png"
+import gemini from "@/assets/exchanges/gemini.png"
+import huobiglobal from "@/assets/exchanges/huobiglobal.png"
+import itezcom from "@/assets/exchanges/itezcom.png"
+import korbit from "@/assets/exchanges/korbit.png"
+import kraken from "@/assets/exchanges/kraken.png"
+import kucoin from "@/assets/exchanges/kucoin.png"
+import moonpay from "@/assets/exchanges/moonpay.png"
+import mtpelerin from "@/assets/exchanges/mtpelerin.png"
+import okx from "@/assets/exchanges/okx.png"
+import rain from "@/assets/exchanges/rain.png"
+import shakepay from "@/assets/exchanges/shakepay.png"
+import wazirx from "@/assets/exchanges/wazirx.png"
 
 type ExchangeKey =
   | "binance"
@@ -278,16 +278,25 @@ const exchanges: ExchangeDetails = {
 export const useCentralizedExchanges = () => {
   const { locale } = useRouter()
   const { t } = useTranslation("page-get-eth")
-  const [selectedCountry, setSelectedCountry] = useState<ExchangeByCountryOption | null>()
+  const [selectedCountry, setSelectedCountry] =
+    useState<ExchangeByCountryOption | null>()
 
   const placeholderString = t("page-get-eth-exchanges-search")
 
   // Add `value` & `label` for Select component, sort alphabetically
-  const selectOptions: ExchangeByCountryOption[] = Object.entries(exchangeData as ExchangeData)
-    .map(([country, exchanges]) => ({ value: country, label: country, exchanges }))
+  const selectOptions: ExchangeByCountryOption[] = Object.entries(
+    exchangeData as ExchangeData
+  )
+    .map(([country, exchanges]) => ({
+      value: country,
+      label: country,
+      exchanges,
+    }))
     .sort((a, b) => a.value.localeCompare(b.value))
 
-  const handleSelectChange = (selectedOption: ExchangeByCountryOption): void => {
+  const handleSelectChange = (
+    selectedOption: ExchangeByCountryOption
+  ): void => {
     trackCustomEvent({
       eventCategory: `Country input`,
       eventAction: `Selected`,
@@ -298,10 +307,11 @@ export const useCentralizedExchanges = () => {
 
   const exchangesArray = Object.keys(exchanges) as ExchangeKey[]
 
-  const formatList = (values: string[]): string => new Intl.ListFormat(locale, {
-    style: 'long',
-    type: 'conjunction',
-  }).format(values)
+  const formatList = (values: string[]): string =>
+    new Intl.ListFormat(locale, {
+      style: "long",
+      type: "conjunction",
+    }).format(values)
 
   // Construct arrays for CardList
   let filteredExchanges: FilteredData[] = []
@@ -311,9 +321,7 @@ export const useCentralizedExchanges = () => {
     // Filter to exchanges that serve selected Country
     filteredExchanges = shuffle(
       exchangesArray
-        .filter(
-          (exchange) => selectedCountry?.exchanges.includes(exchange)
-        )
+        .filter((exchange) => selectedCountry?.exchanges.includes(exchange))
         // Format array for <CardList/>
         .map((exchange) => {
           // Add state exceptions if Country is USA
@@ -322,7 +330,9 @@ export const useCentralizedExchanges = () => {
           if (selectedCountry.value === UNITED_STATES) {
             const { usaExceptions } = exchanges[exchange]
             if (usaExceptions.length > 0) {
-              description = `${t("page-get-eth-exchanges-except")} ${formatList(usaExceptions)}`
+              description = `${t("page-get-eth-exchanges-except")} ${formatList(
+                usaExceptions
+              )}`
             }
           }
           return {

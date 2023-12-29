@@ -29,17 +29,17 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 // Static assets
-import developersEthBlockImg from "@/public/developers-eth-blocks.png"
-import dogeComputerImg from "@/public/doge-computer.png"
-import ethImg from "@/public/eth.png"
-import financeTransparentImg from "@/public/finance_transparent.png"
-import futureTransparentImg from "@/public/future_transparent.png"
-import hackathonTransparentImg from "@/public/hackathon_transparent.png"
+import developersEthBlockImg from "@/assets/developers-eth-blocks.png"
+import dogeComputerImg from "@/assets/doge-computer.png"
+import ethImg from "@/assets/eth.png"
+import financeTransparentImg from "@/assets/finance_transparent.png"
+import futureTransparentImg from "@/assets/future_transparent.png"
+import hackathonTransparentImg from "@/assets/hackathon_transparent.png"
 // -- Hero
-import communityHeroImg from "@/public/heroes/community-hero.png"
+import communityHeroImg from "@/assets/heroes/community-hero.png"
 // -- Cards
-import upgradesCoreImg from "@/public/upgrades/core.png"
-import whatIsEthereumImg from "@/public/what-is-ethereum.png"
+import upgradesCoreImg from "@/assets/upgrades/core.png"
+import whatIsEthereumImg from "@/assets/what-is-ethereum.png"
 
 export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/community")
@@ -79,7 +79,13 @@ const Divider = () => {
 
 const Page = ({ children }: ChildOnlyProp) => {
   return (
-    <Flex as={MainArticle} direction="column" alignItems="center" w="full" mx="auto">
+    <Flex
+      as={MainArticle}
+      direction="column"
+      alignItems="center"
+      w="full"
+      mx="auto"
+    >
       {children}
     </Flex>
   )

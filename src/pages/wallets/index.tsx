@@ -37,13 +37,20 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { walletOnboardingSimData } from "@/data/WalletSimulatorData"
 
-import DappsImage from "@/public/doge-computer.png"
-import ETHImage from "@/public/eth-logo.png"
-import FindWalletImage from "@/public/wallets/find-wallet.png"
-import HeroImage from "@/public/wallets/wallet-hero.png"
+import DappsImage from "@/assets/doge-computer.png"
+import ETHImage from "@/assets/eth-logo.png"
+import FindWalletImage from "@/assets/wallets/find-wallet.png"
+import HeroImage from "@/assets/wallets/wallet-hero.png"
 
 const Page = (props: BoxProps) => (
-  <Flex as={MainArticle} direction="column" align="center" width="full" m="0 auto" {...props} />
+  <Flex
+    as={MainArticle}
+    direction="column"
+    align="center"
+    width="full"
+    m="0 auto"
+    {...props}
+  />
 )
 
 const GrayContainer = (props: BoxProps) => (

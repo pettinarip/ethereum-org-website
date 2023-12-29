@@ -17,13 +17,10 @@
     "incremental": true,
     "paths": {
       "@/*": ["./src/*"],
-      "@/public/*": ["./public/*"]
+      "@/assets/*": ["./public/*"],
+      "@/assets/*": ["./assets/*"]
     }
   },
   "include": ["./src/**/*", "next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": [
-    "node_modules",
-    "./public",
-    "./src/intl",
-  ]
+  "exclude": ["node_modules", "./public", "./src/intl"]
 }

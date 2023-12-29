@@ -49,25 +49,25 @@ import CreateWalletContent from "!!raw-loader!@/data/CreateWallet.js"
 import SimpleDomainRegistryContent from "!!raw-loader!@/data/SimpleDomainRegistry.sol"
 import SimpleTokenContent from "!!raw-loader!@/data/SimpleToken.sol"
 import SimpleWalletContent from "!!raw-loader!@/data/SimpleWallet.sol"
+import devfixed from "@/assets/developers-eth-blocks.png"
+import dogefixed from "@/assets/doge-computer.png"
+import enterprise from "@/assets/enterprise-eth.png"
+import ethfixed from "@/assets/eth.png"
+import finance from "@/assets/finance_transparent.png"
+import future from "@/assets/future_transparent.png"
+import hackathon from "@/assets/hackathon_transparent.png"
+import hero from "@/assets/home/hero.png"
+import impact from "@/assets/impact_transparent.png"
+import infrastructure from "@/assets/infrastructure_transparent.png"
+import infrastructurefixed from "@/assets/infrastructure_transparent.png"
+import merge from "@/assets/upgrades/merge.png"
+import robotfixed from "@/assets/wallet-cropped.png"
+import ethereum from "@/assets/what-is-ethereum.png"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
 import { fetchNodes } from "@/lib/api/fetchNodes"
 import { fetchTotalEthStaked } from "@/lib/api/fetchTotalEthStaked"
 import { fetchTotalValueLocked } from "@/lib/api/fetchTotalValueLocked"
 import { fetchTxCount } from "@/lib/api/fetchTxCount"
-import devfixed from "@/public/developers-eth-blocks.png"
-import dogefixed from "@/public/doge-computer.png"
-import enterprise from "@/public/enterprise-eth.png"
-import ethfixed from "@/public/eth.png"
-import finance from "@/public/finance_transparent.png"
-import future from "@/public/future_transparent.png"
-import hackathon from "@/public/hackathon_transparent.png"
-import hero from "@/public/home/hero.png"
-import impact from "@/public/impact_transparent.png"
-import infrastructure from "@/public/infrastructure_transparent.png"
-import infrastructurefixed from "@/public/infrastructure_transparent.png"
-import merge from "@/public/upgrades/merge.png"
-import robotfixed from "@/public/wallet-cropped.png"
-import ethereum from "@/public/what-is-ethereum.png"
 
 const SectionHeading = (props: HeadingProps) => (
   <Heading
@@ -335,7 +335,13 @@ const HomePage = ({
   const cardBoxShadow = useToken("colors", "cardBoxShadow")
 
   return (
-    <Flex as={MainArticle} flexDirection="column" alignItems="center" dir={dir} width="full">
+    <Flex
+      as={MainArticle}
+      flexDirection="column"
+      alignItems="center"
+      dir={dir}
+      width="full"
+    >
       <PageMetadata
         title={t("page-index:page-index-meta-title")}
         description={t("page-index:page-index-meta-description")}

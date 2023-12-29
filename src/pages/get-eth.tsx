@@ -35,14 +35,14 @@ import { getLastModifiedDateByPath } from "@/lib/utils/gh"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import uniswap from "@/public/dapps/uni.png"
-import dapps from "@/public/doge-computer.png"
-import oneinch from "@/public/exchanges/1inch.png"
-import bancor from "@/public/exchanges/bancor.png"
-import kyber from "@/public/exchanges/kyber.png"
-import loopring from "@/public/exchanges/loopring.png"
-import hero from "@/public/get-eth.png"
-import wallet from "@/public/wallet.png"
+import uniswap from "@/assets/dapps/uni.png"
+import dapps from "@/assets/doge-computer.png"
+import oneinch from "@/assets/exchanges/1inch.png"
+import bancor from "@/assets/exchanges/bancor.png"
+import kyber from "@/assets/exchanges/kyber.png"
+import loopring from "@/assets/exchanges/loopring.png"
+import hero from "@/assets/get-eth.png"
+import wallet from "@/assets/wallet.png"
 
 const Page = (props: ChildOnlyProp) => (
   <Flex

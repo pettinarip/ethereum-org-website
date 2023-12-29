@@ -44,15 +44,15 @@ import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import community from "@/assets/enterprise-eth.png"
+import hackathon from "@/assets/hackathon_transparent.png"
+import impact from "@/assets/impact_transparent.png"
+import Dappnode from "@/assets/run-a-node/dappnode.svg"
+import Dapptap from "@/assets/run-a-node/dapptap.svg"
+import ethereumInside from "@/assets/run-a-node/ethereum-inside.png"
+import Terminal from "@/assets/run-a-node/terminal.svg"
+import leslie from "@/assets/upgrades/upgrade_rhino.png"
 import { InfoGrid } from "@/layouts/Staking"
-import community from "@/public/enterprise-eth.png"
-import hackathon from "@/public/hackathon_transparent.png"
-import impact from "@/public/impact_transparent.png"
-import Dappnode from "@/public/run-a-node/dappnode.svg"
-import Dapptap from "@/public/run-a-node/dapptap.svg"
-import ethereumInside from "@/public/run-a-node/ethereum-inside.png"
-import Terminal from "@/public/run-a-node/terminal.svg"
-import leslie from "@/public/upgrades/upgrade_rhino.png"
 
 const Divider = () => <Box my="16" w="10%" h="1" bg="homeDivider" />
 

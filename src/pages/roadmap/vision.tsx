@@ -37,10 +37,16 @@ import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import oldship from "@/public/upgrades/oldship.png"
+import oldship from "@/assets/upgrades/oldship.png"
 
 const Page = (props: ChildOnlyProp) => (
-  <Flex as={MainArticle} direction="column" align="center" w="full" {...props} />
+  <Flex
+    as={MainArticle}
+    direction="column"
+    align="center"
+    w="full"
+    {...props}
+  />
 )
 
 const PageDivider = () => (

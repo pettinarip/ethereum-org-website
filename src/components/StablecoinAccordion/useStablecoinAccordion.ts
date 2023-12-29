@@ -2,27 +2,27 @@ import { useTranslation } from "next-i18next"
 
 import { CardListItem } from "../CardList"
 
-import aaveImg from "@/public/dapps/aave.png"
+import aaveImg from "@/assets/dapps/aave.png"
 // -- borrow
-import compoundImg from "@/public/dapps/compound.png"
+import compoundImg from "@/assets/dapps/compound.png"
 // -- earn
-import gitcoinImg from "@/public/dapps/gitcoin.png"
-import loopringImg from "@/public/dapps/loopring.png"
-import matchaImg from "@/public/dapps/matcha.png"
-import oasisImg from "@/public/dapps/stabledai.png"
+import gitcoinImg from "@/assets/dapps/gitcoin.png"
+import loopringImg from "@/assets/dapps/loopring.png"
+import matchaImg from "@/assets/dapps/matcha.png"
+import oasisImg from "@/assets/dapps/stabledai.png"
 // Static assets
 // -- dapps
-import uniImg from "@/public/dapps/uni.png"
-import oneInchImg from "@/public/exchanges/1inch.png"
-import binanceImg from "@/public/exchanges/binance.png"
-import bittrexImg from "@/public/exchanges/bittrex.png"
+import uniImg from "@/assets/dapps/uni.png"
+import oneInchImg from "@/assets/exchanges/1inch.png"
+import binanceImg from "@/assets/exchanges/binance.png"
+import bittrexImg from "@/assets/exchanges/bittrex.png"
 // -- exchanges
-import coinbaseImg from "@/public/exchanges/coinbase.png"
-import coinmamaImg from "@/public/exchanges/coinmama.png"
-import geminiImg from "@/public/exchanges/gemini.png"
-import krakenImg from "@/public/exchanges/kraken.png"
-import ethImg from "@/public/favicon.png"
-import makerImg from "@/public/stablecoins/maker.png"
+import coinbaseImg from "@/assets/exchanges/coinbase.png"
+import coinmamaImg from "@/assets/exchanges/coinmama.png"
+import geminiImg from "@/assets/exchanges/gemini.png"
+import krakenImg from "@/assets/exchanges/kraken.png"
+import ethImg from "@/assets/favicon.png"
+import makerImg from "@/assets/stablecoins/maker.png"
 
 export const useStablecoinAccordion = () => {
   const { t } = useTranslation("page-stablecoins")
