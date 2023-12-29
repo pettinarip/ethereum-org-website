@@ -20,5 +20,5 @@
 [functions]
   included_files = [
     "./src/intl/**/*",
-    "!./public/**/*",
+    "!./assets/**/*",
   ]
