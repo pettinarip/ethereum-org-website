@@ -15,10 +15,4 @@ module.exports = {
   },
   // define custom location for intl files, otherwise default to public/locales (https://github.com/i18next/next-i18next#2-translation-content)
   localePath: "./src/intl",
-  // see updates to your translation JSON files without having to restart your development server each time
-  reloadOnPrerender: true,
-  // languages will be lowered case
-  load: "currentOnly",
-  cleanCode: true,
-  lowerCaseLng: true,
 }
