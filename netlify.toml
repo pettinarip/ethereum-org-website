@@ -21,4 +21,5 @@
   included_files = [
     "./src/intl/**/*",
     "!./public/**/*",
+    "!./.git/**/*",
   ]
